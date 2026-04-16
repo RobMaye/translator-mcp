@@ -1,0 +1,18 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "translator-mcp"
+version = "0.1.0"
+description = "MCP server for the NCATS Biomedical Data Translator"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+dependencies = [
+    "mcp[cli]>=1.25,<2",
+    "httpx>=0.28.0",
+]
+
+[project.scripts]
+translator-mcp = "translator_mcp.server:main"
